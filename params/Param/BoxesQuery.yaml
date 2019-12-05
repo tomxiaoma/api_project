@@ -1,0 +1,13 @@
+BoxesQuery:
+  dec: "教师端小红点"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query BoxesQuery($clazzId:ID!){ boxes(clazzId:$clazzId){ feedBox{ dotCount feed{ id happenedAt creatorName createdAt metadata{ ... ParentFragment } } } activityBox{ dotCount activity{ id title content happenedAt images{ id } teacher{ name nickname } } } taskBox{ dotCount task{ id createdAt taskAction creatorName metadata{ ... GuardianFragment ... TeacherTaskFragment } type } } evaluationBox{ dotCount evaluation{ id title unexpired creatorName isFinished publishedAt finishedAt } } growthPlanReleaseBox{ dotCount feed{ happenedAt childName metadata{ ... on GuardianTaskFeed{ title } } } } albumBox{ href reachedCount } } } fragment GuardianFragment on GuardianTaskFeed{ content student{ name } guardian{ role } images{ id } audio{ id } teacherTask{ title } } fragment ParentFragment on GuardianActivityFeed{ title content images{ id } audio{ id } child{ name } creator{ name } video{ id } } fragment TeacherTaskFragment on TeacherTask{ title images{ id } }",
+        "variables": "{\"clazzId\":2435}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

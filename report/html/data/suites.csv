@@ -1,0 +1,8 @@
+"Status","Name","Duration in ms","Description"
+"passed","testcase.test_ActivityExampleQuery.TestActivityExampleQuery#test_activity_example_small","632",""
+"passed","testcase.test_login.TestLogin#test_login_03","72",""
+"passed","testcase.test_ActivityExampleQuery.TestActivityExampleQuery#test_activity_example_medium","464",""
+"passed","testcase.test_ActivityExampleQuery.TestActivityExampleQuery#test_activity_example_large","505",""
+"passed","testcase.test_login.TestLogin#test_login_02","157",""
+"passed","testcase.test_BoxesQuery.TestBoxesQuery#test_test_boxes_query","329",""
+"passed","testcase.test_login.TestLogin#test_login_01","167",""

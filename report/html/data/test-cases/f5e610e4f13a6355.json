@@ -1,0 +1,74 @@
+{
+  "uid" : "f5e610e4f13a6355",
+  "name" : "根据小班的班级ID查询小班活动范例库",
+  "fullName" : "testcase.test_ActivityExampleQuery.TestActivityExampleQuery#test_activity_example_small",
+  "historyId" : "ef76ed9d2021b4ed8551f39bab42679e",
+  "time" : {
+    "start" : 1575534952530,
+    "stop" : 1575534953162,
+    "duration" : 632
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "28ff04a60459a887",
+      "name" : "log",
+      "source" : "28ff04a60459a887.txt",
+      "type" : "text/plain",
+      "size" : 771989
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "教师端活动案例库"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_ActivityExampleQuery"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestActivityExampleQuery"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-VO4VGDT"
+  }, {
+    "name" : "thread",
+    "value" : "32964-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_ActivityExampleQuery"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f5e610e4f13a6355.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,74 @@
+{
+  "uid" : "e48c98e00500acf6",
+  "name" : "正确的账号登录",
+  "fullName" : "testcase.test_login.TestLogin#test_login_01",
+  "historyId" : "8d37fc9ee5aae95ac2e028a575798742",
+  "time" : {
+    "start" : 1575534954482,
+    "stop" : 1575534954649,
+    "duration" : 167
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "754f770919c23b9c",
+      "name" : "log",
+      "source" : "754f770919c23b9c.txt",
+      "type" : "text/plain",
+      "size" : 1557
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "教师端登录模块"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-VO4VGDT"
+  }, {
+    "name" : "thread",
+    "value" : "32964-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e48c98e00500acf6.json",
+  "parameterValues" : [ ]
+}

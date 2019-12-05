@@ -1,0 +1,71 @@
+[ {
+  "uid" : "e48c98e00500acf6",
+  "name" : "正确的账号登录",
+  "time" : {
+    "start" : 1575534954482,
+    "stop" : 1575534954649,
+    "duration" : 167
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f5e610e4f13a6355",
+  "name" : "根据小班的班级ID查询小班活动范例库",
+  "time" : {
+    "start" : 1575534952530,
+    "stop" : 1575534953162,
+    "duration" : 632
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "702b2fb38bd4efa4",
+  "name" : "不存在的账号登录",
+  "time" : {
+    "start" : 1575534954812,
+    "stop" : 1575534954884,
+    "duration" : 72
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "716dc0640766c969",
+  "name" : "错误的账号登录",
+  "time" : {
+    "start" : 1575534954652,
+    "stop" : 1575534954809,
+    "duration" : 157
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fc4295ddb6d9c1f0",
+  "name" : "根据大班的班级ID查询大班活动范例库",
+  "time" : {
+    "start" : 1575534953636,
+    "stop" : 1575534954141,
+    "duration" : 505
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d4f66d90b0252fba",
+  "name" : "test_test_boxes_query",
+  "time" : {
+    "start" : 1575534954148,
+    "stop" : 1575534954477,
+    "duration" : 329
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a10cddcd88901b8c",
+  "name" : "根据中班的班级ID查询中班活动范例库",
+  "time" : {
+    "start" : 1575534953167,
+    "stop" : 1575534953631,
+    "duration" : 464
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

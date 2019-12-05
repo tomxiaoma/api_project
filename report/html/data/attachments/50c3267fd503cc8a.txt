@@ -1,0 +1,12 @@
+[32mINFO    [0m root:Log.py:68 [INFO 2019-12-05 16:35:54]错误的账号登录
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:206 Starting new HTTP connection (1): 127.0.0.1:8888
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:396 http://127.0.0.1:8888 "POST http://teacher.kid17.com/auth/v1/teacher/auths/login HTTP/1.1" 400 39
+[32mINFO    [0m root:Log.py:68 [INFO 2019-12-05 16:35:54]请求数据：{'phone': 15900796431, 'password': 123456}
+[32mINFO    [0m root:Log.py:68 [INFO 2019-12-05 16:35:54]返回值中返回了对应的值! 需要找到关键词： 密码错误, 实际返回结果 {
+  "code": 20106,
+  "message": "密码错误"
+} 
+[32mINFO    [0m root:Log.py:68 [INFO 2019-12-05 16:35:54]返回数据：{
+  "code": 20106,
+  "message": "密码错误"
+}

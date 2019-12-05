@@ -1,0 +1,22 @@
+[32mINFO    [0m root:Log.py:68 [INFO 2019-12-05 16:35:54]正确的账号登录
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:206 Starting new HTTP connection (1): 127.0.0.1:8888
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:396 http://127.0.0.1:8888 "POST http://teacher.kid17.com/auth/v1/teacher/auths/login HTTP/1.1" 201 397
+[32mINFO    [0m root:Log.py:68 [INFO 2019-12-05 16:35:54]请求数据：{'phone': 15900796431, 'password': 123123}
+[32mINFO    [0m root:Log.py:68 [INFO 2019-12-05 16:35:54]返回值中返回了对应的值! 需要找到关键词： success, 实际返回结果 {
+  "code": 0,
+  "data": {
+    "role": "teacher",
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraWQxNy1hdXRoIiwiaXNzIjoiR1VIN1JKbnByWWRTbFRueUdZUlRJWmk2dmxBQm04N0EiLCJuYmYiOjE1NzU1MzQ5NTUsImlhdCI6MTU3NTUzNDk1NSwianRpIjoiNTBlNzBmNjEtOWRkMS00ZDY1LWFhYWMtZTg5MDlkYzZmN2Q3IiwiZXhwIjoxNjA3MDkxOTA3LCJ1aWQiOiI1NDM3Iiwicm9sZSI6InRlYWNoZXIifQ.Ht_IsWg0BSG5rAWjy_rZx9rKGazUnK0boITNpViip6o",
+    "user_id": 5437
+  },
+  "message": "success"
+} 
+[32mINFO    [0m root:Log.py:68 [INFO 2019-12-05 16:35:54]返回数据：{
+  "code": 0,
+  "data": {
+    "role": "teacher",
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraWQxNy1hdXRoIiwiaXNzIjoiR1VIN1JKbnByWWRTbFRueUdZUlRJWmk2dmxBQm04N0EiLCJuYmYiOjE1NzU1MzQ5NTUsImlhdCI6MTU3NTUzNDk1NSwianRpIjoiNTBlNzBmNjEtOWRkMS00ZDY1LWFhYWMtZTg5MDlkYzZmN2Q3IiwiZXhwIjoxNjA3MDkxOTA3LCJ1aWQiOiI1NDM3Iiwicm9sZSI6InRlYWNoZXIifQ.Ht_IsWg0BSG5rAWjy_rZx9rKGazUnK0boITNpViip6o",
+    "user_id": 5437
+  },
+  "message": "success"
+}

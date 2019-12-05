@@ -1,0 +1,38 @@
+Login:
+  dec: "登录教师端"
+  parameters:
+    -
+      dec: "正确的密码登录教师端"
+      url: /auth/v1/teacher/auths/login
+      data: {
+          phone: 15900796431,
+          password: 123123
+        }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }
+
+    -
+      dec: "错误的密码登录教师端"
+      url: /auth/v1/teacher/auths/login
+      data: {
+        phone: 15900796431,
+        password: 123456
+      }
+
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+
+    - dec: "不存在账号登录教师端"
+      url: /auth/v1/teacher/auths/login
+      data: {
+        phone: 167777755555,
+        password: 123456
+      }
+
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+
