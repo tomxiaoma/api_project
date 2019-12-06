@@ -17,7 +17,7 @@ log = Log.MyLog()
 @allure.feature("教师端小红点")
 class TestBoxesQuery:
 
-    @allure.suite("教师端小红点查询")
+    @allure.title("教师端小红点查询")
     def test_test_boxes_query(self):
         log.info("根据班级ID获取教师端小红点")
         conf = Config()

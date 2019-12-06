@@ -17,7 +17,7 @@ log = Log.MyLog()
 @allure.feature("根据班级ID查询所在班级的所有学生")
 class TestBoxesQuery:
 
-    @allure.suite("查询所有学生")
+    @allure.title("查询所有学生")
     def test_test_boxes_query(self):
         log.info("查询所有学生")
         conf = Config()

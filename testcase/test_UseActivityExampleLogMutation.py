@@ -17,7 +17,7 @@ log = Log.MyLog()
 @allure.feature("园时光描述范例库选用log")
 class TestBoxesQuery:
 
-    @allure.suite("园时光描述范例库选用log")
+    @allure.title("园时光描述范例库选用log")
     def test_test_boxes_query(self):
         log.info("园时光描述范例库选用log")
         conf = Config()

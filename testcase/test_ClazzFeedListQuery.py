@@ -17,7 +17,7 @@ log = Log.MyLog()
 @allure.feature("根据clazz_id分页查询家庭时光列表查询")
 class TestBoxesQuery:
 
-    @allure.suite("根据clazz_id分页查询家庭时光列表查询")
+    @allure.title("根据clazz_id分页查询家庭时光列表查询")
     def test_test_boxes_query(self):
         log.info("根据clazz_id分页查询家庭时光列表查询")
         conf = Config()

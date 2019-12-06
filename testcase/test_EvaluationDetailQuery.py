@@ -18,7 +18,7 @@ log = Log.MyLog()
 @allure.feature("根据评价ID查询评价详情")
 class TestBoxesQuery:
 
-    @allure.suite("根据评价ID查询评价详情")
+    @allure.title("根据评价ID查询评价详情")
     def test_test_boxes_query(self):
         log.info("根据评价ID查询评价详情")
         conf = Config()
