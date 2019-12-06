@@ -23,7 +23,7 @@ class TestActivityExampleQuery:
     @allure.title("根据小班的班级ID查询小班活动范例库")
     def test_activity_example_small(self):
         conf = Config()
-        data = ActivityExampleQuery()
+        data = ActivityExampleQuery().yaml_data
         test = Assert.Assertions()
         request = request_method.RequestMethod()
 
@@ -42,7 +42,7 @@ class TestActivityExampleQuery:
     @allure.title("根据中班的班级ID查询中班活动范例库")
     def test_activity_example_medium(self):
         conf = Config()
-        data = ActivityExampleQuery()
+        data = ActivityExampleQuery().yaml_data
         test = Assert.Assertions()
         request = request_method.RequestMethod()
 
@@ -61,7 +61,7 @@ class TestActivityExampleQuery:
     @allure.title("根据大班的班级ID查询大班活动范例库")
     def test_activity_example_large(self):
         conf = Config()
-        data = ActivityExampleQuery()
+        data = ActivityExampleQuery().yaml_data
         test = Assert.Assertions()
         request = request_method.RequestMethod()
 
