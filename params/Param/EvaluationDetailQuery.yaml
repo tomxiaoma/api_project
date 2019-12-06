@@ -1,0 +1,13 @@
+EvaluationDetailQuery:
+  dec: "根据评价ID查询评价详情"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query EvaluationDetailQuery($id:ID!){ evaluation(evaluationId:$id){ id title term{ name semesterInfo } grade{ level name } notifyTime type evaluationAttributes{ id evaluationCategoryId title firstDomain secondDomain isFinished } evaluationStatistics{ student{ id name avatarUrl } unreachedCount } isPublished isFinished publishedAt finishedAt } }",
+        "variables": "  {\"id\":15} "
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

@@ -16,40 +16,62 @@ def get_parameter(name):
     return param
 
 
+class YamlData:
+    def __init__(self,params):
+        self.url = []
+        self.data = []
+        self.header = []
+        self.yaml_input(params)
+
+    def yaml_input(self,params):
+        for i in range(0, len(params)):
+            self.url.append(params[i]['url'])
+            self.data.append(params[i]['data'])
+            self.header.append(params[i]['header'])
+
+
 class Login:
-    params = get_parameter('Login')
-    url = []
-    data = []
-    header = []
-    for i in range(0, len(params)):
-        url.append(params[i]['url'])
-        data.append(params[i]['data'])
-        header.append(params[i]['header'])
+    def __init__(self):
+        params = get_parameter('Login')
+        self.yaml_data = YamlData(params=params)
 
 
 class ActivityExampleQuery:
-    params = get_parameter('ActivityExampleQuery')
-    url = []
-    data = []
-    header = []
-    for i in range(0, len(params)):
-        url.append(params[i]['url'])
-        data.append(params[i]['data'])
-        header.append(params[i]['header'])
+    def __init__(self):
+        params = get_parameter('ActivityExampleQuery')
+        self.yaml_data = YamlData(params=params)
 
 
 class BoxesQuery:
-    params = get_parameter('BoxesQuery')
-    url = []
-    data = []
-    header = []
-    for i in range(0, len(params)):
-        url.append(params[i]['url'])
-        data.append(params[i]['data'])
-        header.append(params[i]['header'])
+    def __init__(self):
+        params = get_parameter('BoxesQuery')
+        self.yaml_data = YamlData(params=params)
 
 
-if __name__ == '__main__':
-    b = Login()
-    print(dict(b.data[0]))
+class UseActivityExampleLogMutation:
+    def __init__(self):
+        params = get_parameter('UseActivityExampleLogMutation')
+        self.yaml_data = YamlData(params=params)
 
+
+class ClazzFeedListQuery:
+    def __init__(self):
+        params = get_parameter('ClazzFeedListQuery')
+        self.yaml_data = YamlData(params=params)
+
+
+class ClazzStudentsQuery:
+    def __init__(self):
+        params = get_parameter('ClazzStudentsQuery')
+        self.yaml_data = YamlData(params=params)
+
+
+class EvaluationAttributeQuery:
+    def __init__(self):
+        params = get_parameter('EvaluationAttributeQuery')
+        self.yaml_data = YamlData(params=params)
+
+class EvaluationDetailQuery:
+    def __init__(self):
+        params = get_parameter('EvaluationDetailQuery')
+        self.yaml_data = YamlData(params=params)
