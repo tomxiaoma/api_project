@@ -19,7 +19,7 @@ class Assertions:
         """
         try:
             assert first_value in second_value
-            self.log.info('返回值中返回了对应的值! 需要找到关键词：%s, 实际返回结果 %s ' % ('<b style="color:red">'+first_value+'</b>',second_value))
+            self.log.info("返回值中返回了对应的值! 需要找到关键词：%s, 实际返回结果 %s" % ('<b style="color:red">'+first_value+'</b>', second_value))
             return True
         except:
             self.log.error("返回值中没有找到对应的值, 预期结果需要找到关键词： %s, 实际返回结果 %s " % (first_value,second_value))
