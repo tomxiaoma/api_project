@@ -36,7 +36,6 @@ class TestActivityExampleQuery:
         log.info("请求体："+str(params[0]))
         api_url = req_url + urls[0]
         response = request.post_method(url=api_url, data=params[0], header=headers[0])
-        log.info("返回结果："+str(response))
         assert test.assert_in("游戏", str(response))
 
     @allure.title("根据中班的班级ID查询中班活动范例库")
@@ -55,7 +54,6 @@ class TestActivityExampleQuery:
         log.info("请求体：" + str(params[1]))
         api_url = req_url + urls[1]
         response = request.post_method(url=api_url, data=params[1], header=headers[1])
-        log.info("返回结果：" + str(response))
         assert test.assert_in("游戏", str(response))
 
     @allure.title("根据大班的班级ID查询大班活动范例库")
@@ -74,7 +72,6 @@ class TestActivityExampleQuery:
         log.info("请求体：" + str(params[2]))
         api_url = req_url + urls[2]
         response = request.post_method(url=api_url, data=params[2], header=headers[2])
-        log.info("返回结果：" + str(response))
         assert test.assert_in("游戏", str(response))
 
 

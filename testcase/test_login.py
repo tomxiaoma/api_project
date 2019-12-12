@@ -29,7 +29,6 @@ class TestLogin:
         op_header.write_teacher_header()
         log.info("请求数据：" + str(params[0]))
         assert Assertions().assert_in("success", res)
-        log.info("返回数据："+res)
 
     @allure.title("错误的账号登录")
     def test_login_02(self):
@@ -46,7 +45,6 @@ class TestLogin:
         res = RequestMethod().run_main("post", url=api_url, data=params[1], header=headers[1])
         log.info("请求数据：" + str(params[1]))
         assert Assertions().assert_in("密码错误", res)
-        log.info("返回数据：" + res)
 
     @allure.title("不存在的账号登录")
     def test_login_03(self):
@@ -63,7 +61,6 @@ class TestLogin:
         api_url = req_url + urls[2]
         res = RequestMethod().run_main("post", url=api_url, data=params[2], header=headers[2])
         assert Assertions().assert_in("登录用户不存在", res)
-        log.info("返回数据：" + res)
 
 
 

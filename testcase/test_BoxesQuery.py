@@ -30,7 +30,6 @@ class TestBoxesQuery:
         log.info("请求体信息：" + str(params[0]))
         api_url = conf.host_debug + urls[0]
         res= RequestMethod().post_method(url=api_url, data=params[0], header=headers)
-        log.info("返回结果："+str(res))
         assert Assertions().assert_in('happenedAt', str(res))
 
 
