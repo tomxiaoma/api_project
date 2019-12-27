@@ -1,0 +1,13 @@
+KindergartenTeachersQuery:
+  dec: "根据kindergarten_id查询幼儿园所有老师"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query KindergartenTeachersQuery($id: ID!){ kindergarten(id: $id) { id name teachers { id name nickname avatarUrl phone isInit loggedInClazz{ id name } position(kindergartenId: $id) clazzs(kindergartenId: $id) { id name } } } }",
+        "variables": "{\"id\":456} "
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

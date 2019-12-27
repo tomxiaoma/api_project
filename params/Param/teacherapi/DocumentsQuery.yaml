@@ -1,0 +1,12 @@
+DocumentsQuery:
+  dec: "帮助文档查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":" query DocumentsQuery($type:DocumentEnum){ document(type:$type){ id type url title } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

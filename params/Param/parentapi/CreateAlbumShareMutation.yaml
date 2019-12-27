@@ -1,0 +1,13 @@
+CreateAlbumShareMutation:
+  dec: "分享成长册"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "mutation CreateAlbumShareMutation($input: CreateAlbumShareInput!) { createAlbumShare(input: $input) { __typename feed { __typename id } }}",
+        "variables":"{ \"input\": { \"visibleType\": \"ALL_CHILDREN\", \"childId\": \"253136\", \"studentId\": \"191456\", \"termId\": \"9\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

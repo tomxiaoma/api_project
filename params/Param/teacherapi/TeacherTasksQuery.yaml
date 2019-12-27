@@ -1,0 +1,13 @@
+TeacherTasksQuery:
+  dec: "教师端亲子任务列表查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query TeacherTasksQuery($clazz_id:ID $first:Int $after:String $last:Int $before:String){ clazz(id:$clazz_id){ teacherTasks(first:$first after:$after last:$last before:$before){ pageInfo{ hasNextPage } edges{ cursor node{ id title description createdAt subject{ id name description } images{ id rotation url width height students{ id } } finishedStudents:students(finished:true){ id name avatarUrl } unFinishedStudents:students(finished:false){ id name avatarUrl } visibleType teacher{ id nickname avatarUrl } unreadTasks:guardianTasks(read:false){ student{ id avatarUrl name } } } } } } }",
+        "variables": "{\"clazz_id\":3854,\"first\":10,\"after\":null,\"last\":20,\"before\":null}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

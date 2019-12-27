@@ -1,0 +1,13 @@
+platformNotificationDetail:
+  dec: "七七说消息详情查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query platformNotificationDetail($notificationId:ID! $studentId:ID!){ notification(notificationId:$notificationId studentId:$studentId){ content createdAt id link linkImage linkText updatedAt isRead } }",
+        "variables": "{ \"notificationId\": \"252\", \"studentId\": \"92475\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

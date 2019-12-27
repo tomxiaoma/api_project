@@ -1,0 +1,13 @@
+DeleteActivityMutation:
+  dec: "删除在园时光"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation DeleteActivityMutation($input: DeleteTeacherActivityInput!) { deleteTeacherActivity(input: $input) { __typename deletedActivity { __typename id } }}",
+        "variables":"{ \"input\": { \"id\": \"535413\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

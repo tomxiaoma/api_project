@@ -1,0 +1,13 @@
+GuardianFeedQuery:
+  dec: "根据feed_id查询亲子完成情况"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query GuardianFeedQuery($id:ID!){ feed(id:$id){ id type creatorName createdAt happenedAt personalLike{ isLiked likeId } likeList{ id creatorId creatorName } commentList{ id content creatorId creatorName creatorAvatar createdAt targetName } albumPageStyle{ id uri images{ id url width height rotation } } } }",
+        "variables": "{\"id\" :456 }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

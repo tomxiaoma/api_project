@@ -1,0 +1,13 @@
+GuardianEvaluationQuery:
+  dec: "发展评估查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query GuardianEvaluationQuery($studentId: ID!, $evaluationId: ID!) { guardianEvaluation(studentId: $studentId, evaluationId: $evaluationId) { __typename child { __typename id avatarUrl name } grade { __typename name } term { __typename name } title evaluationValues { __typename id star evaluationAttribute { __typename id title firstDomain secondDomain } } finishedAt clazz { __typename name } }}",
+        "variables": "{ \"studentId\": \"191456\", \"evaluationId\": \"11545\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

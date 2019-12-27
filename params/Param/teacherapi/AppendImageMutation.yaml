@@ -1,0 +1,13 @@
+AppendImageMutation:
+  dec: "在园时光补发照片"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation AppendImageMutation($input:RecruitImageInput!){ recruitImage(input:$input){ recuitedImages{ id } } }",
+        "variables":"{ \"input\": { \"images\": [{ \"id\": \"29937285\", \"url\": \"prod/kindergartens/109/teachers/2880/feeds/7dd0ae240a24723565dacac49e87eb8b.jpg\", \"rotation\": 90 }], \"activityId\": \"535483\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

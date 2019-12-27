@@ -1,0 +1,13 @@
+UpdateStudentEvaluationMutation:
+  dec: "编辑更新评估"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation UpdateStudentEvaluationMutation($input:UpdateEvaluationValueInput!){ updateEvaluationValue(input:$input){ res } }",
+        "variables":"{ \"input\":{\"studentId\":\"173333\",\"evaluationValueInputs\": [{ \"evaluationAttributeId\": \"292490\", \"star\": 2 }, { \"evaluationAttributeId\":\"292491\",\"star\": 3 },{\"evaluationAttributeId\":\"292492\", \"star\": 1 }] } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

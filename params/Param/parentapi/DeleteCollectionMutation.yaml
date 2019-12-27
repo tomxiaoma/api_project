@@ -1,0 +1,13 @@
+DeleteCollectionMutation:
+  dec: "取消放入成长册"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation DeleteCollectionMutation($input: DeleteCollectionInput!) { deleteCollection(input: $input) { __typename feed { __typename id } }}",
+        "variables":"{ \"input\": { \"feedId\": \"11652951\", \"imageId\": \"22845059\", \"studentId\": \"191456\", \"childId\": \"253136\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

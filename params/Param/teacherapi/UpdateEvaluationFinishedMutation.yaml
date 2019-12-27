@@ -1,0 +1,13 @@
+UpdateEvaluationFinishedMutation:
+  dec: "完成评估"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "mutation UpdateEvaluationFinishedMutation($input:UpdateEvaluationFinishedInput!){ updateEvaluationFinished(input:$input){ res } }",
+        "variables":"{\"input\": {\"evaluationId\":\"13248\"}}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

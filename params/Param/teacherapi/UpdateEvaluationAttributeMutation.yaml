@@ -1,0 +1,13 @@
+UpdateEvaluationAttributeMutation:
+  dec: "编辑单条发展评估"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "mutation UpdateEvaluationAttributeMutation($input: UpdateEvaluationAttributeInput!){updateEvaluationAttribute(input: $input) {__typename updatedEvaluationAttribute {__typename ...EvaluationAttributeFragment}}}fragment EvaluationAttributeFragment on EvaluationAttribute {__typename  id  evaluationCategoryId title firstDomain secondDomain isFinished}",
+        "variables":"{\"input\": {\"id\":\"316220\",\"title\":\"API身高适宜\"} }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

@@ -1,0 +1,13 @@
+DeleteFeedMutation:
+  dec: "删除个人动态"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation DeleteFeedMutation($input: DeleteFeedInput!) { deleteFeed(input: $input) { __typename deletedFeedId }}",
+        "variables":"{ \"input\": { \"id\": \"11653068\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

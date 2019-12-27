@@ -1,0 +1,13 @@
+GuardianTasksQuery:
+  dec: "根据teacherTaskID分页查询主题列表"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query GuardianTasksQuery($first:Int $after:String $last:Int $before:String $teacherTaskId:ID){ guardianTaskConnection(first:$first after:$after last:$last before:$before teacherTaskId:$teacherTaskId){ edges {cursor } nodes{content id} pageInfo{endCursor startCursor hasNextPage} totalCount } }",
+        "variables": "{\"first\":10,\"after\":null,\"last\":20,\"before\":null,\"teacherTaskId\":1523}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

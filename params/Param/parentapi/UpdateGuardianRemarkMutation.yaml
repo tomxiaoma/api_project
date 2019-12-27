@@ -1,0 +1,13 @@
+UpdateGuardianRemarkMutation:
+  dec: "编辑素质评价家长评语"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation UpdateGuardianRemarkMutation($input: UpdateGuardianRemarkInput!) { updateGuardianRemark(input: $input) { __typename guardianRemark { __typename content createdAt role } }}",
+        "variables":"{ \"input\": { \"evaluationRemarkId\": \"333589\", \"content\": \"接口请求\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

@@ -1,0 +1,13 @@
+SubjectQuery:
+  dec: "根据clazz_id查询主题列表"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query SubjectQuery($clazz_id:ID){ clazz(id:$clazz_id){ subjects{ id name description creator{ id } } } }" ,
+        "variables":"{\"clazz_id\":3854}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

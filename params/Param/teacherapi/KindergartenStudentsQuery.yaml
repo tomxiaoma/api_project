@@ -1,0 +1,13 @@
+KindergartenStudentsQuery:
+  dec: "根据kindergarten_id查询幼儿园所有学生"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query KindergartenStudentsQuery($id:ID!){ kindergarten(id:$id){ clazzs(loginOnly:false){ id name isGraduated students{ id avatarUrl name } } } }",
+        "variables": "{\"id\":456}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

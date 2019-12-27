@@ -1,0 +1,13 @@
+HobbiesQuery:
+  dec: "爱好查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query HobbiesQuery($childId: ID!) { childHobbies(childId: $childId) { __typename id name isSelected(childId: $childId) }}",
+        "variables": "{ \"childId\": \"253136\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

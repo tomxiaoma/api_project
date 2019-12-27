@@ -5,15 +5,12 @@ import os
 
 class Config:
     #标题:
-    TITLE_DEBUG = "test"
-    TITLE_RELEASE = "release"
+    TITLE_TEACHER = "teacher"
+    TITLE_PARENT = "parent"
 
     # values:
-    VALUE_ENVIRONMENT = "environment"
     VALUE_HOST = "host"
 
-    # path
-    path_dir = str(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
 
     def __init__(self):
         """
@@ -27,11 +24,9 @@ class Config:
             raise FileNotFoundError("请确保配置文件存在！")
 
         self.config.read(self.conf_path, encoding='utf-8')
-        self.environment_debug = self.get_conf(Config.TITLE_DEBUG, Config.VALUE_ENVIRONMENT)
-        self.host_debug = self.get_conf(Config.TITLE_DEBUG, Config.VALUE_HOST)
+        self.host_teacher = self.get_conf(Config.TITLE_TEACHER, Config.VALUE_HOST)
 
-        self.environment_release = self.get_conf(Config.TITLE_RELEASE, Config.VALUE_ENVIRONMENT)
-        self.host_release = self.get_conf(Config.TITLE_RELEASE, Config.VALUE_HOST)
+        self.host_parent = self.get_conf(Config.TITLE_PARENT, Config.VALUE_HOST)
 
     def get_conf(self, title, value):
         """

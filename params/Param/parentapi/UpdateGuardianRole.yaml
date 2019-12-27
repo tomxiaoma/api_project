@@ -1,0 +1,13 @@
+UpdateGuardianRole:
+  dec: "家人修改身份"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation UpdateGuardianRole($role: String!, $guardianId: ID!, $childId: ID!) { updateGuardianRole(input: {role: $role, childId: $childId, guardianId: $guardianId}) { __typename updatedGuardian { __typename id invitationStatus isMain name phone role } }}",
+        "variables":"{ \"role\":\"爷爷\",\"guardianId\":\"58888\",\"childId\":\"87256\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

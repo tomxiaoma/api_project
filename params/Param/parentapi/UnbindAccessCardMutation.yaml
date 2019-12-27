@@ -1,0 +1,13 @@
+UnbindAccessCardMutation:
+  dec: "注销我的考勤卡"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation UnbindAccessCardMutation($input:UnbindAccessCardInput!){ unbindAccessCard(input:$input){ error } }",
+        "variables":"{ \"input\": { \"number\": \"10002231\", \"studentId\": \"191456\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

@@ -1,0 +1,13 @@
+GuardiansQuery:
+  dec: "邀请家人页面查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query GuardiansQuery($childId: ID!, $joined: Boolean) { guardians(childId: $childId, joined: $joined) { __typename id invitationStatus isMain(childId: $childId) phone role invitationMethod }}",
+        "variables": "{ \"childId\": \"253136\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

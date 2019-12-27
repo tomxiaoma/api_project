@@ -1,0 +1,13 @@
+DeleteLibrarySubject:
+  dec: "根据主题ID删除园本库主题"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "mutation DeleteLibrarySubject($input:DeleteLibrarySubjectInput!){ deleteLibrarySubject(input:$input){ deletedLibrarySubject{ id } errors{ code message } } }",
+        "variables":"{\"input\": { \"id\":\"677\"}}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

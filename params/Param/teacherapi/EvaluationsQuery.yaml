@@ -1,0 +1,13 @@
+EvaluationsQuery:
+  dec: "根据班级ID查询评价列表"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query EvaluationsQuery($clazz_id:ID!){ finishedEvaluations: evaluations(clazzId:$clazz_id isFinished:true isCurrentTerm:false){ ... EvaluationFragment } unFinishedEvaluations:evaluations(clazzId:$clazz_id isFinished:false isCurrentTerm:true){ ... EvaluationFragment } } fragment EvaluationFragment on Evaluation{ id title finishedAt publishedAt isPublished isFinished notifyTime evaluatedAmount unexpired term{ name semesterInfo } grade{ level name } }",
+        "variables": "{\"clazz_id\":135}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

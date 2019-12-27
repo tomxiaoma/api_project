@@ -1,0 +1,13 @@
+KindClazzListQuery:
+  dec: "根据kindergarten_id查询幼儿园所有学生"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query KindClazzListQuery($kindId: ID! $loginOnly:Boolean){ kindergarten(id: $kindId) { grades(loginOnly:$loginOnly includeGraduated:false){ clazzs{ id name number studentAmount } } } }",
+        "variables": "{\"kindId\":456, \"loginOnly\":true }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

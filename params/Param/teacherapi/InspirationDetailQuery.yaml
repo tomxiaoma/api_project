@@ -1,0 +1,13 @@
+InspirationDetailQuery:
+  dec: "灵感库详情查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query InspirationDetailQuery($id:ID! $clazzId:ID! $kindergartenId:ID){ inspiration(id:$id clazzId:$clazzId kindergartenId:$kindergartenId){ source albumPageStyle{uri id} } relatedInspirations(inspirationId:$id clazzId:$clazzId kindergartenId:$kindergartenId){ source albumPageStyle{uri id} } }",
+        "variables": "{\"id\":123,\"clazzId\":23,\"kindergartenId\":1345}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

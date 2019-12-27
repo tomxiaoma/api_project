@@ -1,0 +1,13 @@
+DeleteEvaluationValuesMutation:
+  dec: "删除已评估的记录"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation DeleteEvaluationValuesMutation($input:DeleteEvaluationValuesInput!){ deleteEvaluationValues(input:$input){ result } }",
+        "variables":"{\"input\":{ \"id\": \"11443\"}}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

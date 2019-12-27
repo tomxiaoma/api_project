@@ -1,0 +1,13 @@
+DeleteImageMutation:
+  dec: "根据照片ID删除已上传的照片"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation DeleteImageMutation($input:DeleteImageInput!){ deleteImage(input:$input){ deletedImage{ id rotation url } } }",
+        "variables":"{\"input\":{\"id\":\"26616894\"}}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

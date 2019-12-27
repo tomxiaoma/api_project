@@ -1,0 +1,13 @@
+MarkGuardianTasksMutation:
+  dec: "将亲子任务标记为已读"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "mutation MarkGuardianTasksMutation($input:MarkGuardianTasksInput!){ markGuardianTasks(input:$input){ res } }",
+        "variables":"{\"input\": { \"teacherTaskId\": \"324638\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

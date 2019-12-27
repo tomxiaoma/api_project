@@ -1,0 +1,16 @@
+CreateLibrarySubject:
+  dec: "创建园本库主题"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "mutation CreateLibrarySubject($input:CreateLibrarySubjectInput!){ createLibrarySubject(input:$input){ createdLibrarySubject{ id } errors{ message } } }",
+        "variables":"{\"input\": { \"title\": \"我是接口创建\", \"kindergartenId\": \"456\", \"gradeLevel\": 4, \"semesterStatus\": 0 } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }
+
+
+

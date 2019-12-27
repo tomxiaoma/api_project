@@ -1,0 +1,13 @@
+GrowthPlanFeeds:
+  dec: "成长计划动态查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query GrowthPlanFeeds($childId: ID, $clazzId: ID!, $first: Int, $after: String, $last: Int, $before: String) { growthPlanReleases(clazzId: $clazzId, first: $first, after: $after, last: $last, before: $before) { __typename pageInfo { __typename hasNextPage } edges { __typename cursor node { __typename id createdAt color growthPlanReleaseGrade currentTerm { __typename semesterInfo } guardianAudio { __typename duration id url } guardianDocLink guardianSummary keyword month publisher(clazzId: $clazzId) { __typename nickname } releaseTime(clazzId: $clazzId) updatedAt isReleased(clazzId: $clazzId) teacherTasks(clazzId: $clazzId) { __typename id title description isFinished(childId: $childId) growthPlanTaskTag { __typename name } feed { __typename id } } } } }}",
+        "variables": "{ \"childId\": \"253136\", \"clazzId\": \"3810\", \"first\": 10, \"after\": null, \"before\": null }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

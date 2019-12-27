@@ -1,0 +1,13 @@
+UpdateFeedMutation:
+  dec: "编辑个人动态"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation UpdateFeedMutation($input: UpdateFeedInput!) { updateFeed(input: $input) { __typename updatedFeed { __typename id type typeName happenedAt createdAt visibleType metadata { __typename ... on GuardianTaskFeed { ...GuardianTaskFeedFragment } ... on GuardianActivityFeed { ...GuardianActivityFeedFragment } ... on CompanionFeed { ...CompanionFeedFragment } } } }}fragment GuardianTaskFeedFragment on GuardianTaskFeed { __typename audio { __typename id url duration } child { __typename id avatarUrl name } completedSortNumber content creator { __typename id avatarUrl nickname studentId } images { __typename id url rotation height width } video { __typename id url duration image { __typename id rotation url height width } } showHappenedAt teacherTaskFeed { __typename audioRequired content id imageRequired images { __typename id url rotation height width } students { __typename id avatarUrl name } teacher { __typename id nickname name avatarUrl } textRequired title growthPlanTaskTag { __typename id } }}fragment GuardianActivityFeedFragment on GuardianActivityFeed { __typename audio { __typename id url duration } video { __typename id url duration image { __typename id rotation url height width } } child { __typename id avatarUrl name } content count { __typename value } creator { __typename id avatarUrl nickname studentId } images { __typename id url rotation height width } title showHappenedAt}fragment CompanionFeedFragment on CompanionFeed { __typename audio { __typename id url duration } video { __typename id url duration image { __typename id rotation url height width } } child { __typename id avatarUrl name } content creator { __typename id avatarUrl nickname studentId } images { __typename id url rotation height width } title showHappenedAt companion { __typename ...CompanionFragment }}fragment CompanionFragment on Companion { __typename id title content sceneTitle backgroundColor h5Url image { __typename url }}",
+        "variables":"{\"input\":{\"id\":\"11653071\",\"title\":\"娜可露露\",\"content\":\"啦啦啦啦\",\"imageIds\": [],\"audioId\": null,\"video\": null,\"visibleType\":\"ALL_CHILDREN\",\"happenedAt\":\"2019-11-11 17:09:21\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

@@ -1,0 +1,13 @@
+CreateGuardianInvitation:
+  dec: "邀请家人"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation CreateGuardianInvitation($phone:String!,$role:String!,$invitationMethod: InvitationMethodEnum!,$childId:ID!){ createGuardianInvitation(input: { phone:$phone role:$role invitationMethod:$invitationMethod childId:$childId }) { id isExist phone role status invitationMethod } }",
+        "variables":"{\"phone\": \"15222222222\", \"role\": \"奶奶\", \"invitationMethod\": \"PHONE\", \"childId\": \"58142\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

@@ -1,0 +1,13 @@
+MonthlyInspirationQuery:
+  dec: "月度灵感库查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query MonthlyInspirationQuery($first:Int $after:String $clazzId:ID!){ monthlyGuides(first:$first after:$after clazzId:$clazzId){ pageInfo{ hasNextPage } edges{ cursor node{ id title content month dateDims{ id weekInfo inspirations(clazzId:$clazzId){ source type } } image{ url } } } } }",
+        "variables": "{\"first\":10,\"after\":\"1\",\"clazzId\":133}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

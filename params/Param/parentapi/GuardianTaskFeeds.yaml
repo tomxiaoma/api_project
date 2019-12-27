@@ -1,0 +1,13 @@
+GuardianTaskFeeds:
+  dec: "孩子亲子任务完成查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query GuardianTaskFeeds($first: Int, $after: String, $last: Int, $before: String, $teacherTaskFeedId: ID!) { guardianTaskFeeds(first: $first, after: $after, last: $last, before: $before, teacherTaskFeedId: $teacherTaskFeedId) { __typename totalCount pageInfo { __typename hasNextPage } edges { __typename cursor node { __typename id type visibleType personalLike { __typename isLiked likeId } likeList { __typename id creatorId creatorName } metadata { __typename ... on GuardianTaskFeed { child { __typename id avatarUrl name } creator { __typename id } content images { __typename id url width height rotation } audio { __typename id url duration } video { __typename id url duration image { __typename id rotation url height width } } } } } } }}",
+        "variables": "{ \"first\": 10, \"after\": null, \"before\": null, \"teacherTaskFeedId\": \"545322\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

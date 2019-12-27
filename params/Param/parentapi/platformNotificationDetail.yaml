@@ -1,0 +1,13 @@
+platformNotificationQuery:
+  dec: "七七说消息列表查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query platformNotificationQuery($first: Int, $after: String, $last: Int, $before: String, $studentId: ID!) { notifications(first: $first, after: $after, last: $last, before: $before, studentId: $studentId) { __typename pageInfo { __typename hasNextPage } edges { __typename cursor node { __typename content createdAt id link linkImage linkText updatedAt } } }}",
+        "variables": "{ \"first\": 1, \"studentId\": \"92475\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

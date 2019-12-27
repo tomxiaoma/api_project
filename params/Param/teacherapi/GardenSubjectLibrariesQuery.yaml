@@ -1,0 +1,13 @@
+GardenSubjectLibrariesQuery:
+  dec: "园本库主题下的内容列表查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query GardenSubjectLibrariesQuery($id  :ID! $after:String $first:Int){ librarySubject(id:$id){ kindergartenLibraries(first:$first after:$after){ pageInfo{ hasNextPage } edges{ cursor node{ id title content hasRead authorInfo originType images{ id url height width rotation } selectedCount linkTitle linkUrl linkImageUrl tag } } } } }",
+        "variables": "{\"id\" :123, \"after\":\"12\" , \"first\":10 }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

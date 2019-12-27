@@ -1,0 +1,13 @@
+PickedTextbookQuery:
+  dec: "根据班级ID查询精选教材"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query PickedTextbookQuery($clazzId:ID!){ clazz(id:$clazzId){ pickedTextbook{ description id image{bucket driver height} } } textbooks(clazzId:$clazzId){ id } }",
+        "variables": " {\"clazzId\":133}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

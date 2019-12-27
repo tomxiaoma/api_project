@@ -1,0 +1,13 @@
+RecommendInspirationsQuery:
+  dec: "灵感库推荐查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query RecommendInspirationsQuery($clazzId:ID!){ popup(clazzId:$clazzId){ image{ id url width height } backgroundColor inspirations{ source  kindergartenLibrary{content authorInfo} } } }",
+        "variables": "{\"clazzId\":7675}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

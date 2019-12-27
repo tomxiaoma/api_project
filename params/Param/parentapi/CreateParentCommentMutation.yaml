@@ -1,0 +1,13 @@
+CreateParentCommentMutation:
+  dec: "家长评论"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "mutation CreateParentCommentMutation($input:CreateCommentInput!){ createComment(input:$input){ comment{ id content targetName creatorId createdAt creatorName creatorAvatar } } }",
+        "variables":"{ \"input\": { \"content\": \"接口数据\", \"feedId\": \"11652920\", \"parentId\": null, \"childId\": \"87256\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

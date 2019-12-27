@@ -1,0 +1,12 @@
+TaskClassificationsQuery:
+  dec: "亲子任务库查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query TaskClassificationsQuery{ classifications{ id name } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

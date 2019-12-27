@@ -1,0 +1,13 @@
+CreateAccessCard:
+  dec: "绑定考勤卡"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation CreateAccessCard($input:CreateAccessCardInput!) { createAccessCard(input: $input) { createdAccessCard { number } error } }",
+        "variables":"{ \"input\": { \"number\": \"1011\", \"studentId\": \"92475\", \"kindergartenId\": \"456\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

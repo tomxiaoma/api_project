@@ -1,0 +1,13 @@
+NewMessageListQuery:
+  dec: "新信息列表查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query NewMessageListQuery($clazzId:ID){ newMessages(first:null after:null last:null before:null clazzId:$clazzId){ edges{cursor node{avatarUrl content createdAt creatorName feedId}} } }",
+        "variables": "{\"clazzId\":133}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

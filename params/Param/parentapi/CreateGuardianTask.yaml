@@ -1,0 +1,13 @@
+CreateGuardianTask:
+  dec: "完成亲子任务"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "mutation CreateGuardianTask($imageIds: [ID], $audioId: ID, $content: String, $happenedAt: String!, $childId: ID!, $teacherTaskFeedId: ID!, $studentId: ID) { createGuardianTaskFeed(input: {content: $content, imageIds: $imageIds, audioId: $audioId, happenedAt: $happenedAt, childId: $childId, studentId: $studentId, teacherTaskFeedId: $teacherTaskFeedId}) { __typename createdGuardianTaskFeed { __typename id type typeName happenedAt createdAt visibleType metadata { __typename ... on GuardianTaskFeed { ...GuardianTaskFeedFragment } } } }}fragment GuardianTaskFeedFragment on GuardianTaskFeed { __typename audio { __typename id url duration } child { __typename id avatarUrl name } completedSortNumber content creator { __typename id avatarUrl nickname studentId } images { __typename id url rotation height width } showHappenedAt teacherTaskFeed { __typename audioRequired content id imageRequired images { __typename id url rotation height width } students { __typename id avatarUrl name } teacher { __typename id nickname name avatarUrl } textRequired title growthPlanTaskTag { __typename id } }}",
+        "variables":"{\"imageIds\": [], \"audioId\": null, \"content\": \"可口可乐了\", \"happenedAt\": \"2019-11-20 10:09:55\", \"childId\": \"87256\", \"teacherTaskFeedId\": \"15844700\", \"studentId\": \"92475\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

@@ -1,0 +1,13 @@
+SwitchTextbook:
+  dec: "课程库切换课程"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "mutation SwitchTextbook($input: SwitchTextbookInput!) { switchTextbook(input: $input) { __typename switchedTextbook { __typename ...TextbookFragment } }}fragment TextbookFragment on Textbook { __typename id title publisher description image { __typename url width height }}",
+        "variables":"{\"input\": {\"clazzId\":\"7300\", \"textbookId\": \"4\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

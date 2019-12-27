@@ -1,0 +1,13 @@
+DeleteLikeMutation:
+  dec: "老师取消点赞"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation DeleteLikeMutation($input:DeleteLikeInput!){ deleteLike(input:$input){ res } }",
+        "variables":"{\"input\": {\"likeId\":\"13974662\"}}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

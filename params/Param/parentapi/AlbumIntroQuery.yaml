@@ -1,0 +1,13 @@
+AlbumIntroQuery:
+  dec: "相册简介查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query AlbumIntroQuery($clazzId: ID!) { albumIntro(clazzId: $clazzId) { __typename id imageUrl link }}",
+        "variables":"{\"clazzId\": \"3810\"}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

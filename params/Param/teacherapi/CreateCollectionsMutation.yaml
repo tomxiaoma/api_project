@@ -1,0 +1,16 @@
+CreateCollectionsMutation:
+  dec: "教师放入成长册"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation CreateCollectionsMutation($input:CreateCollectionsInput!){ createCollections(input:$input){ createdCollectionsImage{ id rotation url } createdCollectionsVideo{ id url } } }",
+        "variables":"{ \"input\": { \"activityId\": \"535483\", \"imageId\": \"29341376\", \"teacherId\": \"5437\", \"studentIds\": [\"92475\"] } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }
+
+
+

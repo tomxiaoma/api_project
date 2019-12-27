@@ -1,0 +1,13 @@
+TextBookListQuery:
+  dec: "课程列表查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query TextBookListQuery($clazzId:ID!){ textbooks(clazzId:$clazzId){ description id image{ bucket height}publisher title} }",
+        "variables": "{\"clazzId\":3854}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

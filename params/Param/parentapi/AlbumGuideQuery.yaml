@@ -1,0 +1,13 @@
+AlbumGuideQuery:
+  dec: "相册指南查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query AlbumGuideQuery($studentId: ID!) { albumGuide(studentId: $studentId) { __typename id description }}",
+        "variables":"{ \"studentId\": \"92475\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

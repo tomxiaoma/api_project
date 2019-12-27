@@ -1,0 +1,13 @@
+LibrarySubjectQuery:
+  dec: "根据园本库ID查询园本库主题"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query LibrarySubjectQuery($id  :ID! ){ librarySubject(id:$id){ id libraryCount title termInfo semesterStatus grade{ name level } creator{ id name } createdAt } }",
+        "variables": "{\"id\":123}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

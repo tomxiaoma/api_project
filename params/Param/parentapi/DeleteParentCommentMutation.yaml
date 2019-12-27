@@ -1,0 +1,13 @@
+DeleteParentCommentMutation:
+  dec: "删除评论"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation DeleteParentCommentMutation($input: DeleteCommentInput!) { deleteComment(input: $input) { __typename res }}",
+        "variables":"{ \"input\": { \"commentId\": \"282379\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

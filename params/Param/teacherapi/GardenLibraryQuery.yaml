@@ -1,0 +1,13 @@
+GardenLibraryQuery:
+  dec: "园本库详情查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query GardenLibraryQuery( $id:ID!  $clazzId:ID){ kindergartenLibrary(id:$id ){ id title content hasRead authorInfo originType images{ id url height width rotation } creator{ id } selectedCount librarySubject{ id libraryCount title termInfo semesterStatus grade{ name level } creator{ id name } createdAt } latestUsedTeacher(clazzId:$clazzId){ id name } linkTitle linkUrl linkImageUrl tag } }",
+        "variables": "{\"id\":123,\"clazzId\":233}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

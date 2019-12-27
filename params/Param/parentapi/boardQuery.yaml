@@ -1,0 +1,13 @@
+boardQuery:
+  dec: "通知详情查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query boardQuery($id: ID!, $studentId: ID!) { board(id: $id) { __typename linkUrl linkTitle linkImageUrl content createdAt creator { __typename avatarUrl id nickname } id images { __typename rotation id url } isConfirmed(studentId: $studentId) isRead(studentId: $studentId) tag title type }}",
+        "variables": "{ \"id\": \"122477\", \"studentId\": \"92475\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

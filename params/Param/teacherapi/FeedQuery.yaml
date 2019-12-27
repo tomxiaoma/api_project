@@ -1,0 +1,13 @@
+FeedQuery:
+  dec: "根据ID查询在园时光详情"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"query FeedQuery($id:ID!){ activity(id:$id){ id feedId title content images{ id url width height rotation students{ id name avatarUrl } } kindergartenLibrary{ creator{ name } } happenedAt teacher{ id nickname avatarUrl } visibleType allStusents:students(status:ALL){ id name avatarUrl } collectStudents:students(status:COLLECTED){ id name avatarUrl } unCollectStudents:students(status:UNCOLLECTED){ id name avatarUrl } subject{ id name } personalLike{ isLiked likeId } likeList{ id creatorId creatorName } commentList{ id content creatorId createdAt creatorName creatorAvatar targetName } video{ id rotation size url duration students{ id name avatarUrl } image{ id rotation height width url } } albumPageStyle{ id uri images{ id url width height rotation } } } }",
+        "variables": "{\"id\":123}"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }

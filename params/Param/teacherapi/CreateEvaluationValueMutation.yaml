@@ -1,0 +1,16 @@
+CreateEvaluationValueMutation:
+  dec: "老师评星"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query":"mutation CreateEvaluationValueMutation($input: CreateEvaluationValueInput!) {  createEvaluationValue(input: $input) {    __typename    nextEvaluationInfo {      __typename      ...EvaluationAttributeInfoFragment    }  }}fragment EvaluationAttributeInfoFragment on EvaluationInfo {  __typename  evaluationAttribute {  __typename  ...EvaluationAttributeFragment  }  evaluationValues {    __typename    id    star    student {      __typename      id name  avatarUrl}}}fragment EvaluationAttributeFragment on EvaluationAttribute {  __typename  id  evaluationCategoryId  title  firstDomain  secondDomain  isFinished}",
+        "variables":"{ \"input\": { \"evaluationValueInputs\": [{ \"studentId\": \"89476\", \"star\": 2 }, { \"studentId\": \"92475\", \"star\": 3 }, { \"studentId\": \"92487\", \"star\": 3 }, { \"studentId\": \"94351\",\"star\": 3 }, { \"studentId\": \"120471\", \"star\": 3 }, { \"studentId\": \"132031\", \"star\": 3 }, { \"studentId\": \"132682\", \"star\": 3 }, { \"studentId\": \"133015\", \"star\": 3 }, { \"studentId\": \"133315\", \"star\": 3 }, { \"studentId\": \"133321\", \"star\": 3 }, { \"studentId\": \"133420\", \"star\": 3 }, { \"studentId\": \"133421\", \"star\": 3 }, { \"studentId\": \"133422\", \"star\": 3 }, { \"studentId\": \"143331\", \"star\": 3 }, {\"studentId\": \"143332\", \"star\": 3 }, { \"studentId\": \"143333\", \"star\": 3 }, { \"studentId\": \"143334\", \"star\": 3 }, { \"studentId\": \"164133\", \"star\": 3 }, { \"studentId\": \"209464\", \"star\": 3 }, { \"studentId\": \"209485\", \"star\": 3 }, { \"studentId\": \"254270\", \"star\": 3 }, { \"studentId\": \"254295\", \"star\": 3 }, { \"studentId\": \"254300\", \"star\": 3 }, { \"studentId\": \"267525\", \"star\": 3 }, { \"studentId\": \"268048\", \"star\": 3 }], \"evaluationId\": \"13248\", \"evaluationCategoryId\": \"11\", \"evaluationAttributeId\": \"354163\", \"nextAttributeId\": \"354164\" } }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }
+
+
+

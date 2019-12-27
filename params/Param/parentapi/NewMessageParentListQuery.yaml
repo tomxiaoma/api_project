@@ -1,0 +1,13 @@
+NewMessageParentListQuery:
+  dec: "家长端新消息列表查询"
+  parameters:
+    -
+      url: /rest/graphql
+      data: {
+        "query": "query NewMessageParentListQuery($clazzId: ID!) { newMessages(first: null, after: null, last: null, before: null, clazzId: $clazzId) { __typename edges { __typename ...MessageFragment } }}fragment MessageFragment on MessageEdge { __typename cursor node { __typename id content createdAt avatar feedId feedType creatorName isDeleted type preview { __typename content type } }}",
+        "variables":"{ \"clazzId\": \"3854\" }"
+      }
+
+      header: {
+                 "Content-Type": "application/x-www-form-urlencoded"
+              }
