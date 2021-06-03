@@ -17,7 +17,7 @@ from common import Log
 log = Log.MyLog()
 
 
-@allure.feature("家长端登录模块")
+@allure.feature("家长端登录")
 class TestLogin:
 
     @allure.title("正确的账号登录")
